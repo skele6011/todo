@@ -1,0 +1,107 @@
+:root {
+    --background-dark: #4B5D67;
+    --background-light: #F5F7FA;
+    --primary: #6C7A89;
+    --secondary: #A8E6CF;
+    --card-background: #DFF6FF;
+    --text-dark: #1F2D3D;
+    --text-light: #FFFFFF;
+
+    --accent-blue: #5C85FF;
+    --accent-teal: #00A896;
+    --accent-purple: #9B90C2;
+    --accent-cyan: #7FC8F8;
+  
+    --priority-high: #FF6B6B;
+    --priority-medium: #F4A261;
+    --priority-low: #2EC4B6;
+    
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --border-radius: 12px;
+  }
+
+body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background-dark);
+        color: var(--text-light);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+.container {
+    background-color: var(--accent-teal);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-dark);
+    width: 400px;
+    padding: 20px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, input, #addTodo {
+    margin: 10px 0;
+}
+input, #addTodo {
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-light);
+    width: 100%;
+    -webkit-text-fill-color: var(--accent-teal);
+    background-color: var(--background-light);
+
+}
+input {
+    caret-color: var(--accent-teal);
+}
+#addTodo {
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+#clearAll {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-light);
+    width: 100%;
+    background-color: var(--priority-high);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.error {
+    color: var(--priority-high);
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;
+}
+#error {
+   display: none;
+   color: var(--priority-high);
+    font-size: 1rem;
+    background-color: var(--background-light);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-light);
+    margin: 10px 0;
+    text-align: center;
+}
+img {
+    width: 1.5rem;
+    height: 1.5rem;
+    /* margin: 10px 0; */
+}
+
+.delete:hover {
+    color: var(--priority-high);
+    cursor: pointer;
+}
