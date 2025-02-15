@@ -14,7 +14,8 @@ function addTodo(){
             const li = document.createElement('li');
             li.innerHTML = `${input.value} <img src="src/white-trash.png" class="delete" alt="delete">`;
             list.appendChild(li);
-            input.value = ''; // Clear input thingy
+            saveTodos();
+            input.value = '';
         }
     });
 } addTodo();
@@ -22,6 +23,7 @@ function addTodo(){
 function clearAll(){
     clearBtn.addEventListener('click', () => {
         list.innerHTML = '';
+        saveTodos();
     });
 } clearAll();
 
@@ -43,6 +45,19 @@ function singleDelete(){
     list.addEventListener('click', (e) => {
         if(e.target.classList.contains('delete')){
             e.target.parentElement.remove();
+            saveTodos();
         }
     });
 } singleDelete();
+
+function keepData(){
+    // Load todos when page loads
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos) {
+        list.innerHTML = savedTodos;
+    }
+} keepData();
+
+function saveTodos() {
+    localStorage.setItem('todos', list.innerHTML);
+} saveTodos();
