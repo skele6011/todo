@@ -1,5 +1,6 @@
-const CACHE_NAME = 'quranic-light-v1';
+const CACHE_NAME = 'todo-app-v1';
 const ASSETS_TO_CACHE = [
+  './',
   './index.html',
   './script.js',
   './style.css',
@@ -7,7 +8,7 @@ const ASSETS_TO_CACHE = [
   './src/red-trash.png',
   './icons/icon-192x192.png',
   './icons/icon-512x512.png',
-  // 
+  './manifest.json'
 ];
 
 self.addEventListener('install', (event) => {

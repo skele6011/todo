@@ -2,8 +2,8 @@
     "name": "To Do App",
     "short_name": "To-Do",
     "description": "An app that helps you keep track of your tasks.",
-    "start_url": "https://skele6011.github.io/quranic-light/quranic-light-app/quranic-light-index.html",
-    "scope": "https://skele6011.github.io/quranic-light/quranic-light-app/quranic-light-index.html",
+    "start_url": "./index.html",
+    "scope": ".",
     "display": "standalone",
     "background_color": "#00A896",
     "theme_color": "#7FC8F8",
@@ -11,12 +11,14 @@
         {
             "src": "icons/icon-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "icons/icon-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
